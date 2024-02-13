@@ -1,0 +1,56 @@
+@keyframes duck-fly {
+  0% {
+    left: -200px;
+    top: 58vh;
+  }
+  50% {
+    left: 64vw;
+    top: 56vh;
+  }
+  100% {
+    left: 100vw;
+    top: 52vh;
+  }
+}
+body {
+  counter-reset: count;
+  height: 100vh;
+  margin: 0;
+  background-image: url(img/NvN.gif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.duck-check {
+  position: absolute;
+  visibility: hidden;
+  left: -99999999px;
+}
+.duck-check:checked {
+  counter-increment: count;
+}
+
+.counter-info {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+.counter-info::before {
+  content: counter(count);
+}
+
+.duck {
+  position: absolute;
+}
+.duck__img {
+  width: 200px;
+}
+.duck_1 {
+  animation: duck-fly 5s infinite ease-in both;
+}
+
+h1 {
+  color: white;
+}/*# sourceMappingURL=style.css.map */

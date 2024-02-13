@@ -1,0 +1,57 @@
+$widhtDuck: 200px;
+
+@keyframes duck-fly {
+    0% {
+        left: -$widhtDuck;
+        top: random(90) + vh;
+    }
+    50% {
+        left: random(75) + vw;
+        top: random(90) + vh;
+    }
+    100% {
+        left: 100vw;
+        top: random(90) + vh;
+    }
+}
+
+body {
+    counter-reset: count;
+    height: 100vh;
+    margin: 0;
+    background-image: url(img/NvN.gif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.duck-check {
+    position: absolute;
+    visibility: hidden;
+    left: -99999999px;
+    &:checked {
+        counter-increment: count;
+    }
+}
+
+.counter-info {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    &::before {
+        content: counter(count);
+    }
+}
+.duck {
+    position: absolute;
+    &__img {
+        width: $widhtDuck;
+    }
+    &_1 {
+        animation: duck-fly 5s infinite ease-in both;
+    }
+}
+
+h1 {
+    color: white;
+}
