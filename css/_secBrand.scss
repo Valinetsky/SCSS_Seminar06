@@ -1,0 +1,50 @@
+.picture {
+    margin: 0 auto;
+}
+
+.brand {
+    background-color: $accentColorTint;
+    display: flex;
+    align-items: center;
+
+    &__img {
+        width: 100%;
+        display: flex;
+        & img {
+            max-width: 100%;
+        }
+    }
+    &__logo {
+        width: 100%;
+        display: flex;
+        padding-left: 62px;
+    }
+}
+
+.logo {
+    &__box {
+        display: flex;
+    }
+
+    &__rectangle {
+        width: 12px;
+        height: 97%;
+        background-color: $accentColor;
+        margin-right: 16px;
+    }
+
+    &__header {
+        color: $backColor;
+        font-size: 48px;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+
+    &__subheader {
+        font-size: 32px;
+        font-weight: 700;
+        &_colored {
+            color: $accentColor;
+        }
+    }
+}

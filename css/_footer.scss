@@ -1,0 +1,36 @@
+footer {
+    background-color: $backColor;
+}
+
+.footer {
+    &__container {
+        padding-top: 23px;
+        padding-bottom: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__cp {
+        line-height: 19px;
+        color: $backColorInverse;
+    }
+    &__icons {
+        display: flex;
+        gap: 7px;
+    }
+    &__iconbox {
+        width: 31px;
+        height: 32px;
+        background-color: $whiteOnBlackColor;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        &:hover {
+            background-color: $accentColor;
+            & path {
+                fill: $whiteOnBlackColor;
+            }
+        }
+    }
+}

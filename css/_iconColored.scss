@@ -1,0 +1,13 @@
+.icon {
+    display: inline-block;
+    -webkit-mask-image: url(../img/icons/Cart_icon.svg);
+    mask-image: url(../img/icons/Cart_icon.svg);
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    width: 26px;
+    height: 26px;
+    background: $whiteOnBlackColor;
+    margin-right: 11px;
+}

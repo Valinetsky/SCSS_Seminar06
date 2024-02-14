@@ -1,0 +1,167 @@
+@import "reset";
+@import "vars";
+
+@import "base";
+
+@import "nav";
+
+@import "arrival";
+
+.menu {
+    &__filter {
+        position: relative;
+    }
+    &__details {
+        list-style: none;
+        display: flex;
+        &[open] {
+            // Тут вопрос к дизайнеру: закрытый filter выровнен слева с нижеследующими карточками товара, а открытый (сама надпись filter) смещается по горизонтали на padding открытого блока details, то есть — прыгает по экрану. На мой взгляд — плохо, поэтому ширину не фиксирую.
+            // width: 100%;
+            padding: 13px 33px 0px 16px;
+            position: absolute;
+            top: -13px;
+            left: -16px;
+            z-index: 100;
+            background: $burgerMenuBgColor;
+            box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+            & p {
+                color: $accentColor;
+            }
+            & path {
+                fill: $accentColor;
+            }
+        }
+    }
+    &__switch {
+        display: flex;
+        gap: 11px;
+        align-items: center;
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        &_bold {
+            font-weight: 600;
+            color: $burgerMenuHeaderColor;
+            display: inline-block;
+        }
+    }
+    &__choice {
+        display: flex;
+        gap: 28px;
+    }
+    &__img path {
+        fill: $burgerMenuHeaderColor;
+    }
+}
+
+.filter {
+    margin-top: 20px;
+    &__details:last-child {
+        margin-bottom: 0px;
+        padding-bottom: 0;
+    }
+
+    &__details[open] {
+        summary {
+            color: $accentColor;
+        }
+    }
+    &__summary {
+        font-weight: 400;
+        color: $burgerMenuLineColor;
+        padding: 8px 11px 11px;
+        border-left: 5px solid $accentColor;
+
+        margin-bottom: 18px;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            border-bottom: 1px solid $formBgColor;
+        }
+    }
+    &__ul {
+        color: $burgerMenuLineColor;
+        padding-left: 16px;
+    }
+    &__li {
+        margin-bottom: 6px;
+        &:first-child {
+            margin-top: 24px;
+        }
+
+        &:last-child {
+            margin-bottom: 24px;
+        }
+    }
+}
+
+@import "choice";
+
+@import "secGoods";
+
+.goods {
+    margin-top: 0;
+}
+
+.pager {
+    display: inline-flex;
+    gap: 18px;
+    align-items: baseline;
+    padding: 12px 16px;
+    border: 1px solid $subHeadColor;
+    border-radius: 5px;
+
+    &__content {
+        display: flex;
+        gap: 18px;
+    }
+    &__number {
+        font-size: 16px;
+        line-height: 19px;
+        color: $subHeadColor;
+        &_active {
+            color: $accentColor;
+        }
+    }
+}
+
+@import "secOperation";
+
+@import "secSubscribe";
+
+@import "footer";
+
+@import "mediaCommon";
+
+@media screen and (min-width: 320px) and (max-width: 767.98px) {
+    .menu {
+        &__text_bold {
+            display: none;
+        }
+        &__filter {
+            height: 25px;
+        }
+        &__details {
+            &[open] {
+                top: -13px;
+            }
+        }
+        &__switch {
+            svg {
+                height: 25px;
+                width: auto;
+            }
+        }
+    }
+
+    .choice {
+        gap: 24px;
+    }
+}

@@ -1,0 +1,132 @@
+@import "reset";
+@import "vars";
+
+@import "base";
+
+@import "nav";
+
+@import "arrival";
+
+@import "mediaCommon";
+
+@import "form";
+
+.form {
+    &__header {
+        margin-bottom: 0;
+    }
+    &__container {
+        width: 360px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        & input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            margin: 0;
+        }
+        & button {
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17px;
+            align-items: center;
+            & svg {
+                fill: $mainColor;
+            }
+            &:hover svg {
+                fill: $backColorInverse;
+            }
+        }
+    }
+    &__name {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__sex {
+        display: flex;
+        gap: 20px;
+        accent-color: $accentColor;
+        & p {
+            display: flex;
+            gap: 10px;
+            font-size: 11px;
+            font-weight: 400;
+            line-height: 13px;
+        }
+    }
+    &__comment {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 16px;
+        color: $formBgColor;
+    }
+}
+
+.registration {
+    &__container {
+        padding-top: 64px;
+        padding-bottom: 96px;
+        display: flex;
+        gap: 128px;
+    }
+    &__comment {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 29px;
+    }
+    &__list ul {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        & li {
+            display: flex;
+            align-items: center;
+            gap: 23px;
+            & span {
+                display: inline-block;
+                width: 20px;
+                height: 16px;
+                // background-color: red;
+                background-image: url(../img/icons/list.svg);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .registration {
+        &__container {
+            gap: 22px;
+            div {
+                width: 100%;
+            }
+        }
+        &__comment {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19px;
+            letter-spacing: 0em;
+            text-align: left;
+            gap: 32px;
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767.98px) {
+    .registration {
+        &__container {
+            flex-direction: column;
+            gap: 40px;
+        }
+    }
+}
+
+@import "secSubscribe";
+
+@import "footer";

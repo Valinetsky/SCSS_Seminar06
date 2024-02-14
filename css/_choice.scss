@@ -1,0 +1,47 @@
+.choice {
+    display: flex;
+    justify-content: space-between;
+    &__details {
+        position: relative;
+    }
+
+    &__details[open] {
+        summary img {
+            transform: rotate(180deg);
+        }
+    }
+    &__content {
+        background: $burgerMenuBgColor;
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px;
+        z-index: 100;
+
+        li {
+            margin-bottom: 5px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__summary {
+        position: relative;
+    }
+    &__square {
+        width: 13px;
+        height: 13px;
+        border: 1px solid $formBgColor;
+    }
+    &__line {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+    }
+    &__box {
+        display: flex;
+        gap: 10px;
+    }
+}

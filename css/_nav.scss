@@ -1,0 +1,94 @@
+nav {
+    background-color: $backColor;
+    padding-top: 18px;
+    padding-bottom: 19px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.nav {
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__left {
+        display: flex;
+        align-items: flex-end;
+        gap: 41px;
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        gap: 33px;
+    }
+}
+
+summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+details[open] .details__box {
+    position: absolute;
+    background: $burgerMenuBgColor;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    padding: 32px 74px 32px 33px;
+    top: 75px;
+    right: 0;
+    z-index: 1000;
+}
+
+.topmenu {
+    font-weight: 700;
+    line-height: 17px;
+    color: $burgerMenuHeaderColor;
+    padding-bottom: 12px;
+
+    &__person a {
+        line-height: 2;
+        color: $accentColor;
+        margin-bottom: 12px;
+    }
+
+    &__person a:hover {
+        text-decoration: underline dotted;
+    }
+
+    &__item a {
+        display: block;
+        line-height: 1;
+        color: $burgerMenuLineColor;
+
+        padding-left: 22px;
+    }
+
+    &__item:last-child a {
+        margin-bottom: 0;
+    }
+}
+
+.parent {
+    position: relative;
+
+    &__info:after {
+        content: attr(count);
+        position: absolute;
+        top: -8px;
+        right: -9px;
+
+        width: 19px;
+        height: 19px;
+
+        background: $accentColor;
+        color: $cartCountColor;
+
+        font-size: 12px;
+        text-align: center;
+        line-height: 20px;
+
+        border-radius: 10px;
+    }
+}

@@ -1,0 +1,297 @@
+@import "reset";
+@import "vars";
+
+@import "base";
+
+@import "nav";
+
+@import "arrival";
+
+@import "cartitem";
+
+@import "mediaCommon";
+
+.cartitem {
+    width: 652px;
+    &__box {
+        width: 100%;
+    }
+}
+
+.cart {
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        &_pad {
+            padding-top: 96px;
+            padding-bottom: 128px;
+        }
+    }
+    &__box {
+        display: flex;
+        flex-direction: column;
+        gap: 72px;
+    }
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    &__buttons-box {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: 0em;
+        & a {
+            color: inherit;
+            &:link {
+                text-decoration: none;
+            }
+
+            &:visited {
+                text-decoration: none;
+            }
+
+            // &:hover {
+            //     text-decoration: underline;
+            // }
+
+            &:active {
+                text-decoration: underline;
+            }
+        }
+    }
+    &__button {
+        padding: 16px 40px;
+        border: 1px solid $burgerMenuLineColor;
+
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+    &__order {
+        width: 360px;
+        padding-top: 12px;
+    }
+    &__total {
+        margin-top: 57px;
+    }
+}
+
+// .form {
+//     &__header {
+//         font-size: 16px;
+//         font-weight: 400;
+//         line-height: 19px;
+//         letter-spacing: 0em;
+//         margin-bottom: 20px;
+//     }
+//     &__container {
+//         & form {
+//             font-size: 13px;
+//             font-weight: 400;
+//             line-height: 16px;
+//             letter-spacing: 0em;
+//         }
+
+//         & input[type="text"],
+//         input[type="password"],
+//         input[type="date"],
+//         input[type="datetime"],
+//         input[type="email"],
+//         input[type="number"],
+//         input[type="search"],
+//         input[type="tel"],
+//         input[type="time"],
+//         input[type="url"],
+//         textarea,
+//         select {
+//             background-color: $burgerMenuBgColor;
+//             border: 1px solid $formBgColor;
+
+//             height: auto;
+//             margin: 0;
+//             outline: 0;
+//             padding: 8px 18px;
+//             height: 48px;
+//             width: 100%;
+//             color: #8a97a0;
+//             box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+//             margin-bottom: 20px;
+//             transition: all 0.2s ease;
+//         }
+
+//         input::placeholder {
+//             color: $formBgColor;
+//         }
+
+//         input:focus,
+//         textarea:focus,
+//         select:focus {
+//             border-color: $accentColor;
+//         }
+
+//         button {
+//             text-transform: uppercase;
+//             padding: 11px 15px;
+
+//             border: 1px solid $burgerMenuLineColor;
+
+//             font-style: normal;
+//             font-weight: 400;
+//             font-size: 11px;
+//             line-height: 13px;
+//             &:hover {
+//                 color: $backColorInverse;
+//                 background-color: $accentColor;
+//             }
+//         }
+//     }
+// }
+@import "form";
+
+.total {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 42px;
+    background-color: $backColorInverse;
+
+    &__text-box {
+        display: flex;
+        gap: 24px;
+    }
+    &__sub-text {
+        font-size: 11px;
+        line-height: 13px;
+        margin-bottom: 12px;
+    }
+    &__head-text {
+        margin-bottom: 39px;
+        & span {
+            color: $accentColor;
+        }
+    }
+
+    &__link {
+        width: 100%;
+        padding: 16px;
+        color: $backColorInverse;
+        background-color: $accentColor;
+        text-align: center;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -17px;
+            border-top: 1px solid $formBgColor;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .cart {
+        &__container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &__box {
+            width: 100%;
+        }
+        &__order {
+            padding-top: 64px;
+            width: 100%;
+        }
+        &__form {
+            display: flex;
+
+            justify-content: space-between;
+            gap: 16px;
+        }
+        &__total {
+            width: 50%;
+            margin-top: 38px;
+        }
+    }
+    .form__container {
+        width: 50%;
+    }
+
+    .cartitem {
+        width: 100%;
+
+        &__imagebox {
+            width: 33%;
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767.98px) {
+    .cart {
+        &__container {
+            padding-top: 48px;
+            padding-bottom: 96px;
+        }
+        &__box {
+            gap: 32px;
+        }
+        &__buttons-box {
+            gap: 8px;
+        }
+        &__button {
+            width: 100%;
+            padding: 8px;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 14px;
+            letter-spacing: 0em;
+        }
+        &__form {
+            flex-direction: column;
+        }
+        &__total {
+            width: 100%;
+            margin-top: 38px;
+        }
+    }
+    .form__container {
+        width: 100%;
+    }
+    .cartitem {
+        &__box {
+            padding: 14px 12px 38px 17px;
+        }
+        &__imagebox {
+            width: 40%;
+        }
+        &__info {
+            font-size: 14px;
+            margin-bottom: 6px;
+        }
+        &__header {
+            font-size: 16px;
+            margin-bottom: 24px;
+        }
+
+        &__number {
+            font-size: 14px;
+        }
+    }
+}
+
+@import "secSubscribe";
+
+@import "footer";

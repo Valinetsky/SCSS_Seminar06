@@ -1,0 +1,15 @@
+.take {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 96px;
+    &__header {
+        margin: 96px auto 64px auto;
+    }
+
+    &__container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+}

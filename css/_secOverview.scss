@@ -1,0 +1,68 @@
+@import "mixins";
+
+.overview {
+    margin-top: 65px;
+    margin-bottom: 96px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    &:last-child {
+        grid-column: span 3;
+        height: 10 px;
+    }
+    &__card {
+        padding: 105px 0;
+        text-transform: uppercase;
+    }
+    &__subtitle {
+        color: $whiteOnBlackColor;
+        font-size: 16px;
+    }
+    &__title {
+        color: $accentColor;
+        font-size: 24px;
+        font-weight: 700;
+    }
+    @for $i from 1 through 4 {
+        @include overviewImgBg($i);
+    }
+    &__card_04 {
+        background-position-y: initial;
+        grid-column: span 3;
+        padding: 65px 0;
+    }
+
+    // &__card_01 {
+    //     background: linear-gradient(
+    //             rgba(33, 22, 22, 0.7),
+    //             rgba(33, 22, 22, 0.7)
+    //         ),
+    //         url(../img/overview01.png) no-repeat top center / cover;
+    // }
+
+    // &__card_02 {
+    //     background: linear-gradient(
+    //             rgba(33, 22, 22, 0.7),
+    //             rgba(33, 22, 22, 0.7)
+    //         ),
+    //         url(../img/overview02.png) no-repeat top center / cover;
+    // }
+
+    // &__card_03 {
+    //     background: linear-gradient(
+    //             rgba(33, 22, 22, 0.7),
+    //             rgba(33, 22, 22, 0.7)
+    //         ),
+    //         url(../img/overview03.png) no-repeat top center / cover;
+    // }
+
+    // &__card_04 {
+    //     background: linear-gradient(
+    //             rgba(33, 22, 22, 0.7),
+    //             rgba(33, 22, 22, 0.7)
+    //         ),
+    //         url(../img/overview04.png) no-repeat center / cover;
+    //     grid-column: span 3;
+    //     padding: 65px 0;
+    // }
+}
