@@ -10,7 +10,5 @@
 Ссылка на макет страницы:
 https://www.figma.com/file/TQaPa1gzsX6Qb4Gqj4fve7/Shop-(Copy)?type=design&node-id=0-1&mode=design&t=jRXMmNm04xKXBoxX-0
 
-Ссылка на предыдущий семинар с исходниками SCSS:
+Ссылка на предыдущий семинар с исходным кодом и скриншотами на разных разрешениях:
 https://github.com/Valinetsky/SCSS_Seminar05
-
-
