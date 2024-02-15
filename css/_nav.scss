@@ -41,6 +41,22 @@ details[open] .details__box {
     z-index: 1000;
 }
 
+details[open] summary ~ * {
+    transform-origin: center top;
+    animation: sweep 0.2s ease-in;
+}
+
+@keyframes sweep {
+    0% {
+        transform: scale(1, 0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale (1, 1);
+        opacity: 1;
+    }
+}
+
 .topmenu {
     font-weight: 700;
     line-height: 17px;
